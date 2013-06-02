@@ -20,7 +20,7 @@ def main():
     thread.start_new_thread(reader,(ser,))
 
     while ser.isOpen():
-        txt = sys.stdin.read(1)
+        txt = sys.stdin.readline()
         if txt == 'q':
             ser.close()
         else:
