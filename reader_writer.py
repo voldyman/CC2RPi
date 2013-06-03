@@ -3,6 +3,8 @@
 import sys
 import serial
 import thread
+# Simple module to enable reading a single character at a time in python
+from getch import getch
 
 def reader(soc):
     while soc.isOpen():
@@ -20,7 +22,8 @@ def main():
     thread.start_new_thread(reader,(ser,))
 
     while ser.isOpen():
-        txt = sys.stdin.readline()
+        txt = getch()
+        sys.stdout.write(txt)
         if txt == 'q':
             ser.close()
         else:
