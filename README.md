@@ -5,6 +5,7 @@ These are the basic scripts that we use for debuging and testing while developin
 
 [**UARTS**](http://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter) are used to communicate with the sensors as they use very less battery and are very simple to setup.
 
+these scripts are released under the GPLv3 license
 ##Requirements
 
 * python-flask
